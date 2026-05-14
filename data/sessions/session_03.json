@@ -1,0 +1,15 @@
+{
+  "session_id": "session_03",
+  "problem_id": "flatten_array",
+  "language": "python",
+  "session_duration_seconds": 180,
+  "code": "def flatten(lst):\n    \"\"\"Recursively flatten a nested list.\"\"\"\n    result = []\n    for item in lst:\n        if isinstance(item, list):\n            result.extend(flatten(item))\n        else:\n            result.append(item)\n    return result\n\n# Example usage\nnested = [1, [2, [3, 4], 5], [6, 7]]\nprint(flatten(nested))  # [1, 2, 3, 4, 5, 6, 7]",
+  "events": [
+    {"type": "pause", "timestamp": 0.0, "duration_seconds": 12.0},
+    {"type": "paste", "timestamp": 12.0, "content_length": 285, "content_preview": "def flatten(lst):\n    \"\"\"Recursively flatten a nested lis..."},
+    {"type": "pause", "timestamp": 14.5, "duration_seconds": 8.3},
+    {"type": "cursor_jump", "timestamp": 22.8, "from_line": 1, "to_line": 12},
+    {"type": "keystroke", "timestamp": 26.0, "text": "\nprint(flatten(nested))", "chars": 22, "avg_ms_between_keys": 175},
+    {"type": "keystroke", "timestamp": 32.0, "text": "  # [1, 2, 3, 4, 5, 6, 7]", "chars": 26, "avg_ms_between_keys": 160}
+  ]
+}

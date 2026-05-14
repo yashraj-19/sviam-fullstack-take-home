@@ -1,0 +1,33 @@
+{
+  "session_id": "session_15",
+  "problem_id": "merge_intervals",
+  "language": "python",
+  "session_duration_seconds": 1620,
+  "code": "def merge(intervals):\n    if len(intervals) <= 1:\n        return intervals\n    \n    intervals.sort()\n    result = [intervals[0]]\n    \n    for i in range(1, len(intervals)):\n        if intervals[i][0] <= result[-1][1]:\n            result[-1][1] = max(result[-1][1], intervals[i][1])\n        else:\n            result.append(intervals[i])\n    \n    return result\n\nprint(merge([[1,3],[2,6],[8,10],[15,18]]))\nprint(merge([[1,4],[4,5]]))\nprint(merge([[1,4],[0,0]]))\nprint(merge([]))",
+  "events": [
+    {"type": "keystroke", "timestamp": 5.0, "text": "def merge(intervals):", "chars": 21, "avg_ms_between_keys": 285},
+    {"type": "pause", "timestamp": 15.0, "duration_seconds": 25.0},
+    {"type": "keystroke", "timestamp": 40.0, "text": "\n    if len(intervals) <= 1:", "chars": 28, "avg_ms_between_keys": 268},
+    {"type": "keystroke", "timestamp": 55.0, "text": "\n        return intervals", "chars": 25, "avg_ms_between_keys": 275},
+    {"type": "pause", "timestamp": 68.0, "duration_seconds": 30.0},
+    {"type": "keystroke", "timestamp": 98.0, "text": "\n    \n    intervals.sort()", "chars": 25, "avg_ms_between_keys": 290},
+    {"type": "pause", "timestamp": 115.0, "duration_seconds": 22.0},
+    {"type": "keystroke", "timestamp": 137.0, "text": "\n    result = [intervals[0]]", "chars": 28, "avg_ms_between_keys": 265},
+    {"type": "pause", "timestamp": 155.0, "duration_seconds": 28.0},
+    {"type": "keystroke", "timestamp": 183.0, "text": "\n    \n    for i in range(1, len(intervals)):", "chars": 42, "avg_ms_between_keys": 258},
+    {"type": "pause", "timestamp": 205.0, "duration_seconds": 18.0},
+    {"type": "keystroke", "timestamp": 223.0, "text": "\n        if intervals[i][0] <= result[-1][1]:", "chars": 44, "avg_ms_between_keys": 272},
+    {"type": "pause", "timestamp": 248.0, "duration_seconds": 15.0},
+    {"type": "keystroke", "timestamp": 263.0, "text": "\n            result[-1][1] = max(result[-1][1], intervals[i][1])", "chars": 62, "avg_ms_between_keys": 255},
+    {"type": "pause", "timestamp": 290.0, "duration_seconds": 12.0},
+    {"type": "keystroke", "timestamp": 302.0, "text": "\n        else:", "chars": 14, "avg_ms_between_keys": 280},
+    {"type": "keystroke", "timestamp": 310.0, "text": "\n            result.append(intervals[i])", "chars": 39, "avg_ms_between_keys": 262},
+    {"type": "pause", "timestamp": 325.0, "duration_seconds": 20.0},
+    {"type": "keystroke", "timestamp": 345.0, "text": "\n    \n    return result", "chars": 22, "avg_ms_between_keys": 275},
+    {"type": "pause", "timestamp": 360.0, "duration_seconds": 25.0},
+    {"type": "keystroke", "timestamp": 385.0, "text": "\n\nprint(merge([[1,3],[2,6],[8,10],[15,18]]))", "chars": 44, "avg_ms_between_keys": 248},
+    {"type": "keystroke", "timestamp": 402.0, "text": "\nprint(merge([[1,4],[4,5]]))", "chars": 28, "avg_ms_between_keys": 258},
+    {"type": "keystroke", "timestamp": 415.0, "text": "\nprint(merge([[1,4],[0,0]]))", "chars": 28, "avg_ms_between_keys": 262},
+    {"type": "keystroke", "timestamp": 430.0, "text": "\nprint(merge([]))", "chars": 17, "avg_ms_between_keys": 270}
+  ]
+}

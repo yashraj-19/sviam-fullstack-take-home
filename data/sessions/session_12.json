@@ -1,0 +1,14 @@
+{
+  "session_id": "session_12",
+  "problem_id": "debounce",
+  "language": "javascript",
+  "session_duration_seconds": 120,
+  "code": "// Solution by candidate\nfunction debounce(func, wait) {\n  let timeout;\n  return function executedFunction(...args) {\n    const later = () => {\n      clearTimeout(timeout);\n      func(...args);\n    };\n    clearTimeout(timeout);\n    timeout = setTimeout(later, wait);\n  };\n}\n\nmodule.exports = debounce;",
+  "events": [
+    {"type": "keystroke", "timestamp": 2.0, "text": "// Solution by candidate", "chars": 24, "avg_ms_between_keys": 155},
+    {"type": "pause", "timestamp": 8.0, "duration_seconds": 18.0},
+    {"type": "paste", "timestamp": 26.0, "content_length": 248, "content_preview": "function debounce(func, wait) {\n  let timeout;\n  re..."},
+    {"type": "pause", "timestamp": 28.5, "duration_seconds": 12.0},
+    {"type": "keystroke", "timestamp": 40.5, "text": "\n\nmodule.exports = debounce;", "chars": 28, "avg_ms_between_keys": 162}
+  ]
+}
